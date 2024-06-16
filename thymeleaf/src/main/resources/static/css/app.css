@@ -1,0 +1,308 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --font-inter: "Inter", sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #1a1a1a;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.swal2-container {
+  font-family: var(--font-inter);
+}
+
+.swal2-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.swal2-icon > div {
+  font-size: 1.5rem !important;
+}
+
+.swal2-input {
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d;
+}
+.header > div {
+  width: 100%;
+  max-width: 46rem;
+  display: flex;
+  justify-content: center;
+}
+.header > button {
+  position: absolute;
+  width: 1.875rem;
+  height: 1.875rem;
+  right: 100px;
+  top: 100px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.header > button > svg {
+  fill: #fff;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  height: 3.375rem;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: -1.6875rem;
+}
+.form > input {
+  width: 37.875rem;
+  padding: 0 1rem;
+  height: 3.375rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0D0D0D;
+  background-color: #333;
+  outline: none;
+  color: #fff;
+  font-family: var(--font-inter);
+}
+.form > button {
+  width: fit-content;
+  height: 3.375rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #1e6f9f;
+  font-family: var(--font-inter);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+.form > button:disabled {
+  cursor: not-allowed;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-inter);
+  width: 46rem;
+  height: auto;
+  margin: 0 auto;
+}
+.info > h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+.info > p {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 2.5rem;
+  line-height: 1.5;
+}
+.info > div {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1.25rem;
+}
+.info > div > button, .info > div > a > button {
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  gap: 1.25rem;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.info > div > button:disabled, .info > div > a > button:disabled {
+  cursor: not-allowed;
+}
+.info > div > button {
+  background-color: #4ea8de;
+}
+.info > div > a > button {
+  background-color: #5e60ce;
+}
+
+.taskList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.taskList > div {
+  width: 46rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.taskList > div > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+.taskList > div > div:first-of-type > div.created, .taskList > div > div:first-of-type > div.concluded {
+  display: flex;
+  gap: 0.5rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.taskList > div > div:first-of-type > div.created p, .taskList > div > div:first-of-type > div.concluded p {
+  color: #4ea8de;
+}
+.taskList > div > div:first-of-type > div.created > span, .taskList > div > div:first-of-type > div.concluded > span {
+  padding: 0.125rem 0.5rem;
+  background-color: #333;
+  border-radius: 6.25rem;
+  color: #fff;
+}
+.taskList > div > hr {
+  border: none;
+  height: 2px;
+  background-color: #333;
+  margin: 20px 0;
+}
+.taskList > div > div:last-child {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+  width: 44rem;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #262626;
+  border: 1px solid #333333;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.task > button:first-child {
+  background-color: transparent;
+  border: 2px solid #4EA8DE;
+  border-radius: 12.5rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.task > button:first-child.concluida {
+  background-color: #5e60ce;
+  border: 2px solid #5E60CE;
+  position: relative;
+}
+.task > button:first-child.concluida::after {
+  content: "✓";
+  font-size: 0.75rem;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task > button:first-child:disabled {
+  cursor: not-allowed;
+}
+.task > p {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.25rem;
+  width: 100%;
+  text-decoration: none;
+}
+.task > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+.task > button:disabled {
+  cursor: not-allowed;
+}
+.task > button > svg > path {
+  stroke: gray;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=app.css.map */

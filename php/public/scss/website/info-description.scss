@@ -1,0 +1,55 @@
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-inter);
+  width: 46rem;
+  height: auto;
+  margin: 0 auto;
+
+  > h2{
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 2rem;
+  }
+
+  > p{
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 2.5rem;
+    line-height: 1.5;
+  }
+
+  > div{
+    display: flex;
+    margin-top: 2rem;
+    gap: 1.25rem;
+
+    > button, > a > button{
+      width: fit-content;
+      padding: 1rem;
+      border-radius: .25rem;
+      gap: 1.25rem;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: .875rem;
+
+      &:disabled{
+        cursor: not-allowed;
+      }
+    }
+
+    > button{
+      background-color: #4ea8de;
+    }
+
+    > a > button{
+      background-color: #5e60ce;
+    }
+  }
+}
