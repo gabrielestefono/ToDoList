@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterdart/src/website/header_component.dart';
 import 'package:flutterdart/src/website/form_component.dart';
 import 'package:flutterdart/src/website/task_component.dart';
+import 'package:flutterdart/src/website/task_list_component.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           children: [
             const HeaderComponent(),
             FormComponent(),
-            const TaskComponent()
+            const TaskListComponent()
           ],
         ),
       ),
