@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-    <?php
-        ini_set('display_errors', 1);
+    <?php         ini_set('display_errors', 1);
         error_reporting(E_ALL);
     ?>
-    <?=include '../templates/website/todolist.php';?>
+    <?php include '../templates/website/todolist.php';?>
 </body>
 </html>

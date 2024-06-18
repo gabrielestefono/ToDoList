@@ -1,3 +1,3 @@
-<?=include '../templates/components/header.php';?>
-<?=include '../templates/components/form.php';?>
-<?=include '../templates/components/tasklist.php';?>
+<?php include '../templates/components/header.php'?>
+<?php include '../templates/components/form.php'?>
+<?php include '../templates/components/tasklist.php'?>

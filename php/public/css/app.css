@@ -107,18 +107,26 @@ table {
 
 .form {
   display: flex;
-  width: 100%;
   height: 3.375rem;
+  width: calc(100% - 4rem);
   justify-content: center;
   gap: 0.5rem;
+  margin: 0 auto;
   margin-top: -1.6875rem;
+}
+@media screen and (min-width: 992px) {
+  .form {
+    width: 100%;
+    margin: initial;
+    margin-top: -1.6875rem;
+  }
 }
 .form > input {
   width: 37.875rem;
   padding: 0 1rem;
   height: 3.375rem;
   border-radius: 0.5rem;
-  border: 1px solid #0D0D0D;
+  border: none;
   background-color: #333;
   outline: none;
   color: #fff;
@@ -196,19 +204,39 @@ table {
 }
 
 .taskList {
-  width: 100%;
+  width: calc(100% - 4rem);
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .taskList {
+    width: 100%;
+    margin: initial;
+  }
 }
 .taskList > div {
-  width: 46rem;
+  width: 100%;
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 576px) {
+  .taskList > div {
+    max-width: 46rem;
+  }
+}
 .taskList > div > div:first-of-type {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media screen and (min-width: 576px) {
+  .taskList > div > div:first-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .taskList > div > div:first-of-type > div.created, .taskList > div > div:first-of-type > div.concluded {
   display: flex;
@@ -217,14 +245,17 @@ table {
   font-size: 0.875rem;
   font-weight: 700;
 }
-.taskList > div > div:first-of-type > div.created p, .taskList > div > div:first-of-type > div.concluded p {
-  color: #4ea8de;
-}
 .taskList > div > div:first-of-type > div.created > span, .taskList > div > div:first-of-type > div.concluded > span {
   padding: 0.125rem 0.5rem;
   background-color: #333;
   border-radius: 6.25rem;
   color: #fff;
+}
+.taskList > div > div:first-of-type > div.created > p {
+  color: #4ea8de;
+}
+.taskList > div > div:first-of-type > div.concluded > p {
+  color: #5e60ce;
 }
 .taskList > div > hr {
   border: none;
@@ -240,15 +271,20 @@ table {
 
 .task {
   display: flex;
-  width: 44rem;
+  width: calc(100% - 2rem);
   height: 2.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background-color: #262626;
   border: 1px solid #333333;
   justify-content: space-between;
+  align-items: center;
   gap: 0.75rem;
-  align-items: flex-start;
+}
+@media screen and (min-width: 992px) {
+  .task {
+    width: 44rem;
+  }
 }
 .task > button:first-child {
   background-color: transparent;
@@ -284,6 +320,9 @@ table {
   line-height: 1.25rem;
   width: 100%;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .task > button {
   background-color: transparent;

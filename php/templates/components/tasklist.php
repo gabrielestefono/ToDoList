@@ -12,7 +12,7 @@
         </div>
         <hr />
         <div>
-            <?=include '../templates/components/task.php';?>
+            <?php include '../templates/components/task.php'?>
         </div>
     </div>
 </div>
