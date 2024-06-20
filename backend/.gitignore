@@ -32,6 +32,3 @@ myproject/settings.py
 
 # Outros
 *.swp
-
-
-nest/fastify
