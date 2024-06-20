@@ -1,0 +1,33 @@
+# Arquivos e diretórios do ambiente virtual
+djangoenv/
+flaskenv/
+env/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+
+# Configurações do editor/IDE
+.vscode/
+.idea/
+
+# Arquivos específicos do Django
+myproject/settings.py
+
+# Mídia e arquivos estáticos
+/media
+/staticfiles
+
+# Outros
+*.swp
