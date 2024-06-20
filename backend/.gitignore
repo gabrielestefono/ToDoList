@@ -7,6 +7,7 @@ env/
 *.pyd
 __pycache__/
 *.sqlite3
+readmeIgnore.md
 
 # Arquivos de configuração do sistema operacional
 .DS_Store
