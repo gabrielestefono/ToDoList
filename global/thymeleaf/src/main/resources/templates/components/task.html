@@ -1,7 +1,7 @@
 <div th:fragment="task">
 	<div class="task">
-		<button class="concluida"></button>
-		<p>Nome Task</p>
+		<button th:class="${taskItem.concluida} ? 'concluida' : ''"></button>
+		<p th:text="${taskItem.name}">Nome Task</p>
 		<button class="updateTaskElement" id="updateTask">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
 						class="w-6 h-6">

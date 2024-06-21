@@ -13,8 +13,9 @@
 				</div>
 				<hr />
 				<div>
-						<th:block th:include="components/task::task"></th:block>
-						<th:block th:include="components/task::task"></th:block>
+					<th:block th:each="taskItem : ${taskList}">
+						<th:block th:include="components/task::task" th:with="task=${taskItem}"></th:block>
+					</th:block>
 				</div>
 		</div>
 	</div>
