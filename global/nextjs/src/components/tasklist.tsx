@@ -2,9 +2,9 @@ import { TaskInterface } from "@/pages";
 import Task from "./task";
 import style from './tasklist.module.scss';
 
-interface taskListProps{taskList: TaskInterface[]}
+interface TaskListProps{taskList: TaskInterface[]}
 
-export default function TaskList({taskList}: Readonly<taskListProps>){
+export default function TaskList({taskList}: Readonly<TaskListProps>){
     return (
         <div className={style.taskList}>
             <div>

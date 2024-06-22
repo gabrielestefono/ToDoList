@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import Form from "@/components/form";
 import TaskList from "@/components/tasklist";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { useState } from "react";
 
 export interface TaskInterface {
   nome: string;
@@ -15,15 +16,17 @@ export const getServerSideProps: GetServerSideProps<{ taskList: TaskInterface[] 
   return { props: { taskList } };
 };
 
-export default function Home({ taskList }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home({ taskList }: Readonly<InferGetServerSidePropsType<typeof getServerSideProps>>) {
+  const [tasks, setTasks] = useState<TaskInterface[]>(taskList);
+
   return (
     <>
       <Head>
         <title>To Do List</title>
       </Head>
       <Header />
-      <Form />
-      <TaskList taskList={taskList} />
+      <Form setTaskList={setTasks}/>
+      <TaskList taskList={tasks}/>
     </>
   );
 }

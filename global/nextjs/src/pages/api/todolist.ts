@@ -32,7 +32,6 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     taskAPI.getAll(req, res);
   } else if (req.method === 'POST'){
-    console.log('Chegou em POST')
     taskAPI.addTask(req, res);
   } else {
     res.setHeader('Allow', ['GET', 'POST']);
