@@ -12,7 +12,9 @@
         </div>
         <hr />
         <div>
-            <?php include '../templates/components/task.php'?>
+            <?php foreach ($taskList as $task): ?>
+                <?php include '../templates/components/task.php'; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

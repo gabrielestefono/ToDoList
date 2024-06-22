@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /todolist
+
+# Não redirecionar se o arquivo existir
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php [QSA,L]
