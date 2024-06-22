@@ -1,7 +1,10 @@
+import { TaskInterface } from "@/pages";
 import Task from "./task";
 import style from './tasklist.module.scss';
 
-export default function TaskList(){
+interface taskListProps{taskList: TaskInterface[]}
+
+export default function TaskList({taskList}: Readonly<taskListProps>){
     return (
         <div className={style.taskList}>
             <div>
@@ -17,9 +20,7 @@ export default function TaskList(){
                 </div>
                 <hr />
                 <div>
-                   <Task/>
-                   <Task/>
-                   <Task/>
+                   {taskList.map((task: TaskInterface) => (<Task key={task.nome} {...task}/>))}
                 </div>
             </div>
         </div>
