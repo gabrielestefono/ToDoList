@@ -10,6 +10,6 @@
 <body>
     <x-header/>
     <x-form/>
-    <x-task-list/>
+    <x-task-list :taskList="$taskList"/>
 </body>
 </html>
