@@ -14,16 +14,17 @@ export default class ToDoListController {
     }
 
     public getAll(req: Request, res: Response): void {
-        res.send(this.taskList).status(200);
+        res.status(200).send(this.taskList);
     }
 
     public createOne(req: Request, res: Response): void {
-        console.log(req.body)
-        const nome = req.body.name;
-        if(!nome){
+        const nome = req.body.nome;
+        if (!nome) {
+            res.status(400).send('Nome é obrigatório');
             return;
         }
-        const newTask = this.taskList.push(new Task(nome));
-        res.send(newTask).status(201);
+        const newTask = new Task(nome);
+        this.taskList.push(newTask);
+        res.status(201).send(newTask);
     }
 }

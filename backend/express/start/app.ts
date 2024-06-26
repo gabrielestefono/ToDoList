@@ -1,13 +1,15 @@
 import express from 'express';
+import router from '../routes/routes';
 
 export default class Main {
-    public static init() {
-        const app = express();
-        app.get('/', (req, res) => {
-            res.send('Opora');
-        });
-        app.listen(3000, () => {
-            console.log('Servidor rodando na porta 3000');
-        });
-    }
+  constructor() {}
+
+  public static init() {
+    const app = express();
+    app.use(express.json());
+    app.use('/', router);
+    app.listen(3000, () => {
+      console.log('Servidor rodando na porta 3000');
+    });
+  }
 }
