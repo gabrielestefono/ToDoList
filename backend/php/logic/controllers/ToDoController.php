@@ -9,7 +9,8 @@ class ToDoController{
 		$this->taskList = [
 			0 => new Task('Tarefa 01'),
 			1 => new Task('Tarefa 02'),
-			2 => new Task('Tarefa 03')
+			2 => new Task('Tarefa 03'),
+			3 => new Task('Tarefa 03'),
 		];
 	}
 
